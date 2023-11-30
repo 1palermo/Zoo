@@ -1,0 +1,50 @@
+ZOO(App for Hostellers)
+
+Project Overview
+The Hostel Management System is built using Svelte, a modern JavaScript framework that allows for efficient development of web applications. The system aims to provide solutions to common hostel-related challenges and improve the overall hostel experience for students.
+
+Features
+As a coordinator, your responsibility is to guide the development team in implementing features that address specific issues faced by students in hostels. Some suggested features include:
+
+Room Allocation System:
+
+Efficiently assign rooms to students based on preferences and availability.
+Allow students to request roommates or specific room features.
+Mess Management:
+
+Implement a system for managing and tracking meal plans.
+Provide a platform for students to provide feedback on food quality.
+Maintenance Requests:
+
+Enable students to submit maintenance requests for hostel facilities.
+Streamline the process for maintenance staff to address requests promptly.
+Event Calendar:
+
+Create a calendar for hostel events, meetings, and important dates.
+Allow students and administrators to add and manage events.
+Visitor Management:
+
+Implement a system for registering and managing visitor entries.
+Ensure security and transparency in visitor access to the hostel.
+Project Structure
+The project is structured as follows:
+
+src/: Contains the source code for the Svelte application.
+public/: Houses static assets such as images or other resources.
+docs/: Documentation related to the project.
+Getting Started
+To get started with the development environment, follow these steps:
+
+Clone the repository:
+git clone https://github.com/your-username/hostel-management-system.git
+
+Install dependencies:
+cd hostel-management-system
+npm install
+
+Run the development server:
+npm run dev
+This will launch the application at http://localhost:5000.
+
+Contribution Guidelines
+We welcome contributions from everyone! If you'd like to contribute to the project, please review our contribution guidelines for more details.
