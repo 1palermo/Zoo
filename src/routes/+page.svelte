@@ -1,39 +1,69 @@
-<script>
-	import Accordion from '$lib/Accordion.svelte';
-	const accordions = [1, 2, 3, 4, 5];
-</script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+ <title>Hostel Management System</title>
+ <style>
+    /* Custom CSS */
+    .card:hover {
+      transform: scale(1.05);
+      transition: transform 0.3s ease-in-out;
+    }
 
-<div class="p-10 mx-auto max-w-7xl">
-	<h1 class="bg-primary text-white p-8 rounded-xl text-3xl font-bold mb-4 text-center">
-		Welcome
-	</h1>
-	<p class="mb-4">
-		Visit <a class="bg-primary text-white hover:underline p-1" href="https://kit.svelte.dev"
-			>kit.svelte.dev</a
-		> to learn about Svelte and SvelteKit
-	</p>
-	<p class="mb-4">
-		Visit <a  class="bg-primary text-white hover:underline p-1" href="https://tailwindcss.com">tailwindcss.com</a> to learn about TailwindCSS
-	</p>
-	<p class="mb-12">
-		Yes, you can remove <span  class="bg-primary text-white p-1"> +page.svelte </span> file and you can start making your awesome website.
-	</p>
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.05);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
 
-	<div class="mb-4">
-		<h1 class="text-white font-semibold">Extras</h1>
-		<h2 class="mb-4">
-			Below collapsible accordion is just a Daisy UI pre made utility classes on top of TailwindCSS
-			utility classes
-		</h2>
-		<p>
-			This one is optional: There are different combination of components availble in Daisy UI you
-			can started using it on your next stunning website. Why don't give a try and you won't regret
-			it. Visit <a class="bg-primary text-white hover:underline p-1" href="https://daisyui.com/">daisyui.com</a> to learn about Daisy UI
-		</p>
-	</div>
-	<div class="space-y-2">
-		{#each accordions as accordion}
-			<Accordion number={accordion} />
-		{/each}
-	</div>
-</div>
+    .card:hover .icon {
+      animation: pulse 1.5s infinite;
+    }
+ </style>
+</head>
+<body class="bg-gray-100">
+ <div class="container mx-auto px-4 py-8">
+    <header class="text-center mb-8">
+      <h1 class="text-4xl font-bold text-blue-600">Hostel Management System</h1>
+    </header>
+
+    <main class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <a href="/students" class="card bg-white shadow-md rounded-md p-5 transition duration-300 ease-in-out">
+        <div class="icon text-4xl text-blue-600">
+          <i class="fas fa-user-graduate"></i>
+        </div>
+        <h2 class="text-xl font-bold mb-5 mt-4">Students</h2>
+        <p>Manage student information and their stay in the hostel.</p>
+      </a>
+
+      <a href="/rooms" class="card bg-white shadow-md rounded-md p-5 transition duration-300 ease-in-out">
+        <div class="icon text-4xl text-blue-600">
+          <i class="fas fa-bed"></i>
+        </div>
+        <h2 class="text-xl font-bold mb-5 mt-4">Rooms</h2>
+        <p>Record, manage, and assign rooms to students.</p>
+      </a>
+
+      <a href="/fees" class="card bg-white shadow-md rounded-md p-5 transition duration-300 ease-in-out">
+        <div class="icon text-4xl text-blue-600">
+          <i class="fas fa-money-bill-wave"></i>
+        </div>
+        <h2 class="text-xl font-bold mb-5 mt-4">Fees</h2>
+        <p>Record, manage, and generate fee reports.</p>
+      </a>
+    </main>
+
+    <footer class="mt-8 text-center">
+      <p>&copy; Hostel Management System 2023</p>
+    </footer>
+ </div>
+</body>
+</html>
