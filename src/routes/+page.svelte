@@ -5,7 +5,7 @@
 
 <div class="p-10 mx-auto max-w-7xl">
 	<h1 class="bg-primary text-white p-8 rounded-xl text-3xl font-bold mb-4 text-center">
-		Welcome to TSOC development
+		Welcome
 	</h1>
 	<p class="mb-4">
 		Visit <a class="bg-primary text-white hover:underline p-1" href="https://kit.svelte.dev"
